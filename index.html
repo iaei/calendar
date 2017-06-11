@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calendar</title>
+	<style>
+		table {
+			width: 50%;
+			height: 200px;
+			margin:0 auto;
+			border:1px solid #666;
+			text-align: center;
+		}
+
+		#signup {
+			width: 50%;
+			margin:0 auto;
+			margin-top: 40px;
+		}
+
+		form > * {
+			margin-top:15px;
+		}
+
+		form[oninput]
+		{
+			width: 50%;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<table border="1">
+	<colgroup style="background-color: #eee"></colgroup>
+
+		<thead>
+			<tr style="background-color: #eee">
+				<th></th>
+				<th>周一</th>
+				<th>周二</th>
+				<th>周三</th>
+				<th>周四</th>
+				<th>周五</th>
+				<th>周六</th>
+				<th>周天</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<th>上午</th>
+				<td rowspan="2">上班</td>
+				<td rowspan="2">上班</td>
+				<td>看书</td>
+				<td rowspan="2">上班</td>
+				<td rowspan="2">上班</td>
+				<td rowspan="2">上班</td>
+				<td>运动</td>
+			</tr>
+			
+			<tr>
+				<th>下午</th>
+				<td>看视频</td>
+				<td>看书</td>								
+			</tr>
+			
+			<tr>
+				<th>晚上</th>
+				<td colspan="7">学习</td>
+			</tr>
+		</tbody>
+	</table>
+
+<div id="signup">
+	<form action="#">
+		上传头像 <input type="file" accept="image/*"><br>
+		<input type="text" placeholder="姓名" name="username"><br>
+		<input type="email" placeholder="邮箱" neme="usermail">
+		<select name="mail" id="mail">
+			<option value="qq">@qq.com</option>
+			<option value="126">@126.com</option>
+			<option value="gmail">@gmail.com</option>
+			<option value="foxmail">@foxmail.com</option>
+		</select><br>
+		<input type="password" placeholder="密码" name="password"><br>
+		女 <input type="radio" value="female" name="sex" checked>
+		男 <input type="radio" value="male" name="sex"><br>
+		出生日期 <input type="date" name="birthday"><br>
+		<button type="reset">重填</button><br>
+		<input type="checkbox" checked>同意以下条款<br>
+		<button>注册</button><br>
+
+	</form>
+</div>
+
+
+
+<form oninput="row.value = Math.pow(parseInt(a.value),parseInt(b.value))">
+	<input type="number" name="a" value="2"> 的
+	<input type="number" name="b" value="2"> 次方 =
+	<output name="row">4</output>
+
+</form>
+
+</body>
+</html>
